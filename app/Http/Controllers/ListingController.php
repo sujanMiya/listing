@@ -12,7 +12,10 @@ class ListingController extends Controller
      */
     public function index()
     {
-        return Listing::all();
+         $listings = Listing::all();
+         return view('frontend.home',[
+            'listings' => $listings
+         ]);
     }
 
     /**
